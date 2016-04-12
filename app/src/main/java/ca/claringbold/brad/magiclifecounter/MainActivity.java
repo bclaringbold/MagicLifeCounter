@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
     Button buttonhealthplus_you, buttonhealthminus_you, buttoncmddamageplus_you, buttoncmddamageminus_you;
     Button buttonhealthplus_opponent, buttonhealthminus_opponent, buttoncmddamageplus_opponent, buttoncmddamageminus_opponent;
 
+    Integer healthyou, cmddamageyou, healthopponent, cmddamageopponent;
+
     TextView health_you, cmddamage_you;
     TextView health_opponent, cmddamage_opponent;
-
-    boolean reset;
-
+    
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -70,11 +70,67 @@ public class MainActivity extends AppCompatActivity {
         buttonhealthplus_you.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                health_you.setText(health_you.getText()+"1");
+                healthyou = Integer.parseInt(health_you.getText() + "");
+                health_you.setText(healthyou+1);
+            }
+        });
+
+        buttonhealthminus_you.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                healthyou = Integer.parseInt(health_you.getText() + "");
+                health_you.setText(healthyou-1);
+            }
+        });
+
+        buttoncmddamageplus_you.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cmddamageyou = Integer.parseInt(cmddamage_you.getText() + "");
+                cmddamage_you.setText(cmddamageyou+1);
+            }
+        });
+
+        buttoncmddamageminus_you.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cmddamageyou = Integer.parseInt(cmddamage_you.getText() + "");
+                cmddamage_you.setText(cmddamageyou-1);
             }
         });
 
 
+        buttonhealthplus_opponent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                healthopponent = Integer.parseInt(health_opponent.getText() + "");
+                health_opponent.setText(healthopponent+1);
+            }
+        });
+
+        buttonhealthminus_opponent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                healthopponent = Integer.parseInt(health_opponent.getText() + "");
+                health_opponent.setText(healthopponent-1);
+            }
+        });
+
+        buttoncmddamageplus_opponent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cmddamageopponent = Integer.parseInt(cmddamage_opponent.getText() + "");
+                cmddamage_opponent.setText(cmddamageopponent+1);
+            }
+        });
+
+        buttoncmddamageminus_opponent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cmddamageopponent = Integer.parseInt(cmddamage_opponent.getText() + "");
+                cmddamage_opponent.setText(cmddamageopponent-1);
+            }
+        });
 
                 Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
