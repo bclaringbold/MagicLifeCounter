@@ -17,9 +17,20 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
+import android.widget.TextView;
+
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button buttonhealthplus_you, buttonhealthminus_you, buttoncmddamageplus_you, buttoncmddamageminus_you;
+    Button buttonhealthplus_opponent, buttonhealthminus_opponent, buttoncmddamageplus_opponent, buttoncmddamageminus_opponent;
+
+    TextView health_you, cmddamage_you;
+    TextView health_opponent, cmddamage_opponent;
+
+    boolean reset;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -41,7 +52,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        buttonhealthplus_you=(Button) findViewById(R.id.buttonhealthplus_you);
+        buttonhealthminus_you=(Button) findViewById(R.id.buttonhealthminus_you);
+        buttoncmddamageplus_you=(Button) findViewById(R.id.buttoncmddamageplus_you);
+        buttoncmddamageminus_you=(Button) findViewById(R.id.buttoncmddamageminus_you);
+        health_you=(TextView) findViewById(R.id.health_you);
+        cmddamage_you=(TextView) findViewById(R.id.cmddamage_you);
+
+        buttonhealthplus_opponent=(Button) findViewById(R.id.buttonhealthplus_oppoenent);
+        buttonhealthminus_opponent=(Button) findViewById(R.id.buttonhealthminus_oppoenent);
+        buttoncmddamageplus_opponent=(Button) findViewById(R.id.buttoncmddamageplus_oppoenent);
+        buttoncmddamageminus_opponent=(Button) findViewById(R.id.buttoncmddamageminus_oppoenent);
+        health_opponent=(TextView) findViewById(R.id.health_opponent);
+        cmddamage_opponent=(TextView) findViewById(R.id.cmddamage_opponent);
+
+
+        buttonhealthplus_you.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                health_you.setText(health_you.getText()+"1");
+            }
+        });
+
+
+
+                Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
