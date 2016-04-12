@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ca.claringbold.brad.magiclifecounter.MainActivity$PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/buttonhealthplus_you"
+        android:layout_alignBottom="@+id/startinghealth_you"
+        android:layout_alignStart="@+id/buttonhealthplus_oppoenent" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/buttonhealthminus_you"
+        android:layout_alignBottom="@+id/startinghealth_you"
+        android:layout_toEndOf="@+id/label_opponent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="40"
+        android:id="@+id/startinghealth_you"
+        android:textSize="50dp"
+        android:layout_below="@+id/label_you"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your Health"
+        android:id="@+id/label_you"
+        android:layout_below="@+id/section_label"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/buttonhealthplus_oppoenent"
+        android:layout_gravity="left|right"
+        android:layout_alignBottom="@+id/startinghealth_opponent"
+        android:layout_toStartOf="@+id/label_opponent" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/buttonhealthminus_oppoenent"
+        android:layout_alignBottom="@+id/startinghealth_opponent"
+        android:layout_toEndOf="@+id/label_opponent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="40"
+        android:id="@+id/startinghealth_opponent"
+        android:textSize="50dp"
+        android:layout_below="@+id/label_opponent"
+        android:layout_alignStart="@+id/startinghealth_you" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Opponent&apos;s Health"
+        android:id="@+id/label_opponent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Commander Damage"
+        android:id="@+id/commanderdamage_label"
+        android:layout_below="@+id/buttonhealthplus_you"
+        android:layout_toEndOf="@+id/buttonhealthplus_you" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Commander Damage"
+        android:id="@+id/commanderdamage_label2"
+        android:layout_below="@+id/buttonhealthplus_oppoenent"
+        android:layout_toStartOf="@+id/label_you"
+        android:layout_alignEnd="@+id/commanderdamage_label" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/buttoncmddamageplus_you"
+        android:layout_alignTop="@+id/buttoncmddamageminus_you"
+        android:layout_alignStart="@+id/buttonhealthplus_you" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="21"
+        android:id="@+id/startingcmddamage_you"
+        android:textSize="40dp"
+        android:layout_alignTop="@+id/buttoncmddamageplus_you"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/buttoncmddamageminus_you"
+        android:layout_below="@+id/commanderdamage_label"
+        android:layout_alignStart="@+id/buttonhealthminus_you" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/buttoncmddamageplus_oppoenent"
+        android:layout_below="@+id/commanderdamage_label2"
+        android:layout_alignStart="@+id/buttonhealthplus_oppoenent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="21"
+        android:id="@+id/startingcmddamage_opponent"
+        android:textSize="40dp"
+        android:layout_alignTop="@+id/buttoncmddamageplus_oppoenent"
+        android:layout_alignStart="@+id/startingcmddamage_you" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/buttoncmddamageminus_oppoenent"
+        android:layout_below="@+id/commanderdamage_label2"
+        android:layout_alignStart="@+id/buttonhealthminus_oppoenent" />
+
+</RelativeLayout>
